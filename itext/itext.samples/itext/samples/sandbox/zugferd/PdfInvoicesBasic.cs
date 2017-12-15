@@ -279,7 +279,7 @@ namespace iText.Samples.Sandbox.Zugferd
             return d.ToString(newFormat);
         }
 
-        [LogMessage(LogMessageConstant.FONT_HAS_INVALID_GLYPH, Ignore = true)]
+        [LogMessage(iText.IO.LogMessageConstant.FONT_HAS_INVALID_GLYPH, Ignore = true)]
         [LogMessage(ZugferdLogMessageConstant.WRONG_OR_NO_CONFORMANCE_LEVEL, Ignore = true)]
         [LogMessage(ZugferdLogMessageConstant.NO_ZUGFERD_PROFILE_TYPE_SPECIFIED, Ignore = true)]
         [Test]
