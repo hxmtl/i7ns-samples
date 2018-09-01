@@ -12,6 +12,8 @@
     <AssemblyName>itext.samples</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
     <Reference Include="hsqldb">
       <HintPath>lib\hsqldb.dll</HintPath>
     </Reference>
@@ -86,12 +89,12 @@
       <HintPath>$(SolutionDir)\packages\itext7.licensekey.3.0.2\lib\net40\itext.licensekey.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>$(SolutionDir)\packages\NUnit.3.4.1\lib\net40\nunit.framework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nunit.framework, Version=3.7.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NUnit.3.7.1\lib\net40\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -100,6 +103,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\itextcore\itext.tests\itext.sign.tests\itext.sign.tests.csproj">
+      <Project>{BE15BDF3-B184-4E2F-8459-EBEE3160E19D}</Project>
+      <Name>itext.sign.tests</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\itextcore\itext\itext.barcodes\itext.barcodes.csproj">
       <Project>{dcae8241-e391-418d-ba36-c7c064d7c413}</Project>
       <Name>itext.barcodes</Name>
